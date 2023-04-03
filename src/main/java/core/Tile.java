@@ -8,6 +8,30 @@ package core;
  *
  * @author yumi
  */
-public class Tile {
+public class Tile 
+{
+    
+    private int row;
+    
+    private int column;
+    
+    private Piece piece;
+    
+    private Color color;
+    
+    public Tile(int row, int column, Color color)
+    {
+        
+        this.row = row;
+        
+        this.column = column;
+        
+        this.piece = null;
+        
+        this.color = color;
+                
+    }
+            
+            
     
 }

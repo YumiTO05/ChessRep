@@ -8,6 +8,10 @@ package core;
  *
  * @author yumi
  */
-public enum Color {
+public enum Color 
+{
+    
+    BLACK,
+    WHITE
     
 }

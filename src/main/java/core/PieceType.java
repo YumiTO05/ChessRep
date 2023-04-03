@@ -8,6 +8,14 @@ package core;
  *
  * @author yumi
  */
-public enum PieceType {
+public enum PieceType 
+{
+    
+    PAWN,
+    KING,
+    QUEEN,
+    KNIGHT,
+    BISHOP,
+    ROOK
     
 }

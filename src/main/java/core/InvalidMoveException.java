@@ -8,6 +8,14 @@ package core;
  *
  * @author yumi
  */
-public class InvalidMoveException {
+public class InvalidMoveException extends Exception
+{
+    
+    public InvalidMoveException(String errorMessage)
+    {
+        
+        super(errorMessage);
+        
+    }
     
 }
