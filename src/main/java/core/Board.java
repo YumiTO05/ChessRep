@@ -54,4 +54,15 @@ public class Board
         
     }
     
+    public Tile GetTile(int row, int column)
+    {
+        
+        if(row > this.tiles.length() || column > this.tiles[].length()) throw new IllegalArgumentException();
+        
+        return tiles[row][column];
+        
+    }
+    
+    
+    
 }
