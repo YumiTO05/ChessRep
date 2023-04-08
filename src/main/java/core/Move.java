@@ -57,4 +57,72 @@ public class Move
         
     }
     
+    public boolean checkPiecePresence(int row, int column)
+    {
+        
+        return board.GetTile(row, column).getPiece() != null;
+        
+    }
+    
+    public void wouldEndInKingCheck()
+    {
+        
+        
+        
+    }
+    
+    /*public boolean isTargetOccupiedByAlly(int row, int column)
+    {
+        
+        Piece piece = board.GetTile(row, column).getPiece();
+        
+    }*/
+    
+    public boolean isKingInCheck(int kingRow, int kingColumn, Color kingColor)
+    {
+        
+        return false;
+        
+    }
+    
+    public boolean checkObstacles()
+    {
+        
+        int row = sourceRow;
+        
+        int column = sourceColumn;
+        
+        boolean rowGrows = sourceRow < targetRow;
+        
+        boolean columnGrows = sourceColumn < targetColumn;
+        
+        while(!onTarget(row, column))
+        {
+            
+            if(row != targetRow)
+            {
+                
+                if(rowGrows) row++;
+                else row--;
+                
+            }
+            
+            if(column != targetColumn)
+            {
+                                
+                if(columnGrows) column++;
+                else column--;
+                
+            }
+            
+            if(onTarget(row, column)) return false;
+            
+            if(board.GetTile(row, column).getPiece() != null) return true;
+            
+        }
+        
+        return false;
+        
+    }
+    
 }
