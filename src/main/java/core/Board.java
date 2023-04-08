@@ -54,7 +54,6 @@ public class Board
             
         }
         
-          
     }
     
     public Tile GetTile(int row, int column)
@@ -65,7 +64,5 @@ public class Board
         return tiles[row][column];
 
     }  
-    
-    
-    
+     
 }
