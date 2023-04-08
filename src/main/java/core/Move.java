@@ -36,19 +36,24 @@ public class Move
         
     }
     
-    public Piece getPiece(int sourceRow, int sourceColumn)
+    public Piece getPiece(int row, int column)
     {
         
-        Tile tile = board.GetTile(sourceRow, sourceColumn);
-        
-        return tile.getPiece();
+        return board.GetTile(row, column).getPiece();
         
     }
     
-    public void setPiece(int targetRow, int targetColumn, Piece piece)
+    public void setPiece(int row, int column, Piece piece)
     {
         
-        board.GetTile(targetRow, targetColumn).setPiece(piece);
+        board.GetTile(row, column).setPiece(piece);
+        
+    }
+    
+    public boolean onTarget(int row, int column)
+    {
+        
+        return row == this.targetRow && column == this.targetColumn;
         
     }
     
