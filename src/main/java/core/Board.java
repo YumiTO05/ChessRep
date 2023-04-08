@@ -11,26 +11,28 @@ package core;
 public class Board 
 {
     
-    static final int Rows = 8;
+    static final int ROWS = 8;
     
-    static final int Columns = 8;
+    static final int COLUMNS = 8;
     
-    static final int LastRow = Rows - 1;
+    static final int LASTROW = ROWS - 1;
     
-    static final int LastColumn = Columns - 1;
+    static final int LASTCOLUMN = COLUMNS - 1;
+    
+    Tile[][] tiles;
     
     public Board()
     {
         
-        Tile[][] tiles = new Tile[Rows][Columns];
+        tiles = new Tile[ROWS][COLUMNS];
         
-        for(int i = 0; i < Rows; i++)
+        for(int i = 0; i < tiles.length; i++)
         {
             boolean check = false;
             
             if(i % 2 == 0) check = true;
             
-            for(int j = 0; j < Columns; j++)
+            for(int j = 0; j < tiles[i].length; j++)
             {
                 
                 if(check)
@@ -52,16 +54,19 @@ public class Board
             
         }
         
+          
     }
     
     public Tile GetTile(int row, int column)
     {
+
+        if((row < 0 || row > LASTROW ) || (column < 0 || column > LASTCOLUMN)) throw new IllegalArgumentException();
+
+        Tile tile = tiles[row][column];
         
-        if(row > this.tiles.length() || column > this.tiles[].length()) throw new IllegalArgumentException();
-        
-        return tiles[row][column];
-        
-    }
+        return tile;
+
+    }  
     
     
     
