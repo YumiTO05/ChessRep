@@ -62,9 +62,7 @@ public class Board
 
         if((row < 0 || row > LASTROW ) || (column < 0 || column > LASTCOLUMN)) throw new IllegalArgumentException();
 
-        Tile tile = tiles[row][column];
-        
-        return tile;
+        return tiles[row][column];
 
     }  
     
