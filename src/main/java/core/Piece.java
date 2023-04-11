@@ -4,6 +4,8 @@
  */
 package core;
 
+import java.util.Objects;
+
 /**
  *
  * @author yumi
@@ -58,6 +60,35 @@ public class Piece
         Piece piece = (Piece) object;
         
         return getClass() == object.getClass() && this.type == piece.getType() && this.color == piece.getColor();
+        
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 47 * hash + Objects.hashCode(this.type);
+        hash = 47 * hash + Objects.hashCode(this.color);
+        return hash;
+    }
+    
+    public void validateMove()
+    {
+        
+        
+        
+    }
+    
+    public void executeMove()
+    {
+        
+        
+        
+    }
+    
+    public boolean validateCapture()
+    {
+        
+        return true;
         
     }
     

@@ -71,12 +71,14 @@ public class Move
         
     }
     
-    /*public boolean isTargetOccupiedByAlly(int row, int column)
+    public boolean isTargetOccupiedByAlly(int row, int column)
     {
         
         Piece piece = board.GetTile(row, column).getPiece();
         
-    }*/
+        return board.GetTile(this.sourceRow, this.sourceColumn).getPiece().color == piece.color;
+        
+    }
     
     public boolean isKingInCheck(int kingRow, int kingColumn, Color kingColor)
     {
