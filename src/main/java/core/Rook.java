@@ -11,6 +11,13 @@ package core;
 public class Rook extends Piece
 {
     
+    public Rook(PieceType type, Color color) 
+    {
+        
+        super(type, color);
+        
+    }
+    
     
     
 }

@@ -11,6 +11,13 @@ package core;
 public class Bishop extends Piece
 {
     
+    public Bishop(PieceType type, Color color) 
+    {
+        
+        super(type, color);
+        
+    }
+    
     
     
 }

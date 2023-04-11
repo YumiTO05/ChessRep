@@ -11,4 +11,11 @@ package core;
 public class King extends Piece
 {
     
+    public King(PieceType type, Color color) 
+    {
+        
+        super(type, color);
+        
+    }
+    
 }

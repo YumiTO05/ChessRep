@@ -11,4 +11,11 @@ package core;
 public class Pawn extends Piece
 {
     
+    public Pawn(PieceType type, Color color) 
+    {
+        
+        super(type, color);
+        
+    }
+    
 }
