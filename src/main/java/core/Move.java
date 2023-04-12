@@ -19,7 +19,7 @@ public class Move
     
     protected int targetColumn;
     
-    Board board;
+    protected Board board;
     
     public Move(int sourceRow, int sourceColumn, int targetRow, int targetColumn)
     {
