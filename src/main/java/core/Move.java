@@ -76,7 +76,7 @@ public class Move
         
         Piece piece = board.GetTile(row, column).getPiece();
         
-        return board.GetTile(this.sourceRow, this.sourceColumn).getPiece().color == piece.color;
+        return board.GetTile(this.sourceRow, this.sourceColumn).getPiece().getColor() == piece.getColor();
         
     }
     

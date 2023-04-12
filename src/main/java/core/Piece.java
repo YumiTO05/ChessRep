@@ -71,21 +71,21 @@ public class Piece
         return hash;
     }
     
-    public void validateMove()
+    public void validateMove(Move move)
+    {
+        
+        if(move.sourceRow == move.targetRow && move.sourceColumn == move.targetColumn)
+        
+    }
+    
+    public void executeMove(Move move)
     {
         
         
         
     }
     
-    public void executeMove()
-    {
-        
-        
-        
-    }
-    
-    public boolean validateCapture()
+    public boolean validateCapture(Move move)
     {
         
         return true;
