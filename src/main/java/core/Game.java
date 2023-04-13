@@ -39,10 +39,11 @@ public class Game
         
         int iMaxValue = board.tiles.length - 1;
         
-        int jMaxValue = board.tiles[0].length - 1;
-        
         for(int i = 0; i < board.tiles.length; i++)
         {
+            
+            int jMaxValue = board.tiles[i].length - 1;
+            
             boolean iEqualsZero = i == 0;
             
             boolean iEqualsOne = i == 1;
@@ -107,6 +108,8 @@ public class Game
                     this.blackArmy.add(blackKing);
                     
                 }
+                
+                
                 
             }
             
