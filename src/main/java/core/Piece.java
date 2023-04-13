@@ -10,7 +10,7 @@ import java.util.Objects;
  *
  * @author yumi
  */
-public class Piece 
+public abstract class Piece 
 {
     
     protected PieceType type;
@@ -71,10 +71,22 @@ public class Piece
         return hash;
     }
     
-    public void validateMove(Move move)
+    public void validateMove(Move move) throws InvalidMoveException
     {
         
         if(move.sourceRow == move.targetRow && move.sourceColumn == move.targetColumn)
+        {
+            
+            throw new InvalidMoveException("Piece has not moved from his original position");
+            
+        }
+        
+        if(move.isTargetOccupiedByAlly(move.targetRow, move.targetColumn))
+        {
+            
+            throw new InvalidMoveException("Piece would end on an Ally");
+            
+        }
         
     }
     
@@ -88,7 +100,20 @@ public class Piece
     public boolean validateCapture(Move move)
     {
         
-        return true;
+        try
+        {
+            
+            validateMove(move);
+            
+            return true;
+            
+        }catch(InvalidMoveException ime)
+        {
+            
+            return false;
+            
+        }    
+        
         
     }
     

@@ -4,10 +4,19 @@
  */
 package core;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author yumi
  */
-public class Game {
+public class Game 
+{
+    
+    protected Color turn;
+    
+    protected ArrayList<Piece> blackArmy = new ArrayList<Piece>();
+    
+    
     
 }
