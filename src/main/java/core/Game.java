@@ -121,7 +121,7 @@ public class Game
                 }
                 
                 
-                if((iEqualsSix && j == 0) || (iEqualsSix && j == jMaxValue))
+                if((iEqualsSeven && j == 0) || (iEqualsSeven && j == jMaxValue))
                 {
                     
                     Rook whiteRook = new Rook(PieceType.ROOK, Color.WHITE);
@@ -132,7 +132,7 @@ public class Game
                     
                 }
                 
-                if((iEqualsSix && j == 1) || (iEqualsSix && j == jMaxValue - 1))
+                if((iEqualsSeven && j == 1) || (iEqualsSeven && j == jMaxValue - 1))
                 {
                     
                     Knight whiteKnight = new Knight(PieceType.KNIGHT, Color.WHITE);
@@ -143,7 +143,7 @@ public class Game
                     
                 }
                 
-                if((iEqualsSix && j == 2) || (iEqualsSix && j == jMaxValue - 2))
+                if((iEqualsSeven && j == 2) || (iEqualsSeven && j == jMaxValue - 2))
                 {
                     
                     Bishop whiteBishop = new Bishop(PieceType.BISHOP, Color.WHITE);
@@ -153,7 +153,7 @@ public class Game
                     this.whiteArmy.add(whiteBishop);
                 }
                 
-                if(iEqualsSix && j == 3)
+                if(iEqualsSeven && j == 3)
                 {
                     
                     Queen whiteQueen = new Queen(PieceType.QUEEN, Color.WHITE);
@@ -164,7 +164,7 @@ public class Game
                     
                 }
                 
-                if(iEqualsSix && j == 4)
+                if(iEqualsSeven && j == 4)
                 {
                     
                     King whiteKing = new King(PieceType.KING, Color.WHITE);
@@ -175,7 +175,7 @@ public class Game
                     
                 }
                 
-                if(iEqualsSeven)
+                if(iEqualsSix)
                 {
                     
                     Pawn whitePawn = new Pawn(PieceType.PAWN, Color.WHITE);
@@ -189,6 +189,115 @@ public class Game
             }
             
         }
+        
+    }
+    
+    public void clear()
+    {
+        
+        for(int i = 0; i < board.tiles.length; i++)
+        {
+            
+            for(int j = 0; j < board.tiles[i].length; j++)
+            {
+                
+                this.board.tiles[i][j].setPiece(null);
+                
+            }
+            
+        }
+                    
+        
+    }
+    
+    public Board getBoard()
+    {
+        
+        return this.board;
+        
+    }
+    
+    public Color getTurn()
+    {
+        
+        return this.turn;
+        
+    }
+    
+    public void removePieceFromArmy(Piece piece, Color color)
+    {
+        
+        if(color == Color.BLACK)
+        {
+            
+            blackArmy.remove(piece);
+            
+            return;
+            
+        }
+        
+        if(color == Color.WHITE)
+        {
+            
+            whiteArmy.remove(piece);
+            
+        }
+        
+    }
+    
+    public void addPieceToArmy(Piece piece, Color color)
+    {
+        
+        if(color == Color.BLACK)
+        {
+            
+            blackArmy.add(piece);
+            
+        }
+        
+        if(color == Color.WHITE)
+        {
+            
+            whiteArmy.add(piece);
+            
+        }
+        
+    }
+    
+    public boolean isMovedSourceValid(int row, int column)
+    {
+        
+        if(this.board.tiles[row][column].getPiece() == null) return false;
+        
+        return this.board.tiles[row][column].getPiece().getColor() == this.turn;
+        
+    }
+    
+    public boolean processMove(int sourceRow, int sourceColumn, int targetRow, int targetColumn)
+    {
+        
+        Move move = new Move(sourceRow, sourceColumn, targetRow, targetColumn);
+        
+        try
+        {
+            
+            board.GetTile(sourceRow, sourceColumn).getPiece().validateMove(move);
+            
+            move.wouldEndInKingCheck();
+            
+            
+            
+            
+            
+        }
+        catch(InvalidMoveException ime)
+        {
+            
+            
+            
+        }
+        
+        return true;
         
     }
     

@@ -56,7 +56,14 @@ public class Board
         
     }
     
-    public Tile GetTile(int row, int column)
+    /**
+     *
+     * @param row
+     * @param column
+     * @return
+     * @throws IllegalArgumentException
+     */
+    public Tile GetTile(int row, int column) throws IllegalArgumentException
     {
 
         if((row < 0 || row > LASTROW ) || (column < 0 || column > LASTCOLUMN)) throw new IllegalArgumentException();
