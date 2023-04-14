@@ -109,7 +109,82 @@ public class Game
                     
                 }
                 
+                if(iEqualsOne)
+                {
+                    
+                    Pawn blackPawn = new Pawn(PieceType.PAWN, Color.BLACK);
+                    
+                    board.tiles[i][j].setPiece(blackPawn);
+                    
+                    this.blackArmy.add(blackPawn);
+                    
+                }
                 
+                
+                if((iEqualsSix && j == 0) || (iEqualsSix && j == jMaxValue))
+                {
+                    
+                    Rook whiteRook = new Rook(PieceType.ROOK, Color.WHITE);
+                    
+                    board.tiles[i][j].setPiece(whiteRook);
+                    
+                    this.whiteArmy.add(whiteRook);
+                    
+                }
+                
+                if((iEqualsSix && j == 1) || (iEqualsSix && j == jMaxValue - 1))
+                {
+                    
+                    Knight whiteKnight = new Knight(PieceType.KNIGHT, Color.WHITE);
+                    
+                    board.tiles[i][j].setPiece(whiteKnight);
+                    
+                    this.whiteArmy.add(whiteKnight);
+                    
+                }
+                
+                if((iEqualsSix && j == 2) || (iEqualsSix && j == jMaxValue - 2))
+                {
+                    
+                    Bishop whiteBishop = new Bishop(PieceType.BISHOP, Color.WHITE);
+                    
+                    board.tiles[i][j].setPiece(whiteBishop);
+                    
+                    this.whiteArmy.add(whiteBishop);
+                }
+                
+                if(iEqualsSix && j == 3)
+                {
+                    
+                    Queen whiteQueen = new Queen(PieceType.QUEEN, Color.WHITE);
+                    
+                    board.tiles[i][j].setPiece(whiteQueen);
+                    
+                    this.whiteArmy.add(whiteQueen);
+                    
+                }
+                
+                if(iEqualsSix && j == 4)
+                {
+                    
+                    King whiteKing = new King(PieceType.KING, Color.WHITE);
+                    
+                    board.tiles[i][j].setPiece(whiteKing);
+                    
+                    this.whiteArmy.add(whiteKing);
+                    
+                }
+                
+                if(iEqualsSeven)
+                {
+                    
+                    Pawn whitePawn = new Pawn(PieceType.PAWN, Color.WHITE);
+                    
+                    board.tiles[i][j].setPiece(whitePawn);
+                    
+                    this.blackArmy.add(whitePawn);
+                    
+                }
                 
             }
             
