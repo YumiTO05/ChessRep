@@ -301,4 +301,29 @@ public class Game
         
     }
     
+    public void validateMove(Move move) throws InvalidMoveException
+    {
+        
+        Piece movingPiece = board.tiles[move.sourceRow][move.sourceColumn].getPiece();
+        
+        movingPiece.validateMove(move);
+        
+    }
+            
+    public void executeMove(Move move)
+    {
+        
+        Tile sourceTile = board.tiles[move.sourceRow][move.sourceColumn];
+        
+        Tile targetTile = board.tiles[move.targetRow][move.targetColumn];
+        
+        Piece sourcePiece = sourceTile.getPiece();
+        
+        Piece targetPiece = targetTile.getPiece();
+        
+        
+                
+        
+    }
+    
 }
