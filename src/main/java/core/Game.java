@@ -321,7 +321,20 @@ public class Game
         
         Piece targetPiece = targetTile.getPiece();
         
+        sourcePiece.executeMove(move);
         
+        if(targetPiece != null) 
+        {
+            
+            if(targetPiece.getColor() == Color.BLACK) blackArmy.remove(targetPiece);
+            
+            if(targetPiece.getColor() == Color.WHITE) whiteArmy.remove(targetPiece);
+            
+        }
+        
+        targetTile.setPiece(sourcePiece);
+        
+        sourceTile.setPiece(null);
                 
         
     }

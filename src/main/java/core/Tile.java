@@ -11,13 +11,13 @@ package core;
 public class Tile 
 {
     
-    private int row;
+    protected int row;
     
-    private int column;
+    protected int column;
     
-    private Piece piece;
+    protected Piece piece;
     
-    private Color color;
+    protected Color color;
     
     public Tile(int row, int column, Color color)
     {
@@ -47,5 +47,12 @@ public class Tile
         return this.piece;
         
     }
+    
+    public Color getColor()
+    {
+        
+        return this.color;
+        
+    }        
     
 }

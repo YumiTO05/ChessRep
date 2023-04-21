@@ -16,38 +16,61 @@ public class GameDynamicsListener implements MouseListener, MouseMotionListener
 {
 
     @Override
-    public void mouseClicked(MouseEvent me) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public void mouseClicked(MouseEvent me) 
+    {
+        
+        
+        
     }
 
     @Override
-    public void mousePressed(MouseEvent me) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public void mousePressed(MouseEvent me) 
+    {
+        
+        int x = me.getX();
+        
+        int y = me.getY();
+        
     }
 
     @Override
-    public void mouseReleased(MouseEvent me) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public void mouseReleased(MouseEvent me) 
+    {
+        
+        
+        
     }
 
     @Override
-    public void mouseEntered(MouseEvent me) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public void mouseEntered(MouseEvent me) 
+    {
+        
+        
+        
     }
 
     @Override
-    public void mouseExited(MouseEvent me) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public void mouseExited(MouseEvent me) 
+    {
+        
+        
+        
     }
 
     @Override
-    public void mouseDragged(MouseEvent me) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public void mouseDragged(MouseEvent me) 
+    {
+        
+        
+        
     }
 
     @Override
-    public void mouseMoved(MouseEvent me) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public void mouseMoved(MouseEvent me) 
+    {
+        
+        
+        
     }
     
 }

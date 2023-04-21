@@ -68,7 +68,7 @@ public class Board
 
         if((row < 0 || row > LASTROW ) || (column < 0 || column > LASTCOLUMN)) throw new IllegalArgumentException();
 
-        return tiles[row][column];
+        return this.tiles[row][column];
 
     }  
      
