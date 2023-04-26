@@ -11,7 +11,6 @@ import core.Piece;
 import core.PieceType;
 import java.awt.BorderLayout;
 import java.awt.Dimension;
-import java.awt.GridBagLayout;
 import java.awt.GridLayout;
 import java.awt.Image;
 import java.net.URL;
@@ -47,7 +46,7 @@ public class BoardPanel extends JPanel
         
         this.game = game;
         
-        moveIsOnGoing = false;
+        this.moveIsOnGoing = false;
         
         initializeLayout();
         

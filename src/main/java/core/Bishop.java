@@ -11,6 +11,8 @@ package core;
 public class Bishop extends Piece
 {
     
+    boolean onWhite;
+    
     public Bishop(PieceType type, Color color) 
     {
         
