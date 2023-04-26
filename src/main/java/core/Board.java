@@ -11,15 +11,15 @@ package core;
 public class Board 
 {
     
-    static final int ROWS = 8;
+    public static final int ROWS = 8;
     
-    static final int COLUMNS = 8;
+    public static final int COLUMNS = 8;
     
     static final int LASTROW = ROWS - 1;
     
     static final int LASTCOLUMN = COLUMNS - 1;
     
-    Tile[][] tiles;
+    public Tile[][] tiles;
     
     public Board()
     {

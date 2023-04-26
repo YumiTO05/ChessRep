@@ -13,4 +13,25 @@ import javax.swing.JFrame;
 public class GameFrame extends JFrame
 {
     
+    BoardPanel boardPanel;
+    
+    core.Game game;
+    
+    public GameFrame()
+    {
+        
+        this.game = new core.Game();
+        
+        this.boardPanel = new BoardPanel(this.game);
+        
+        add(boardPanel);
+        
+        setResizable(false);
+        
+        pack();
+        
+        setVisible(true);
+        
+    }
+    
 }

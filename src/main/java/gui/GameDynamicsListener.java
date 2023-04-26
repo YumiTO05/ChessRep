@@ -15,6 +15,15 @@ import java.awt.event.MouseMotionListener;
 public class GameDynamicsListener implements MouseListener, MouseMotionListener
 {
 
+    private BoardPanel boardPanel;
+    
+    public GameDynamicsListener(BoardPanel boardPanel) 
+    {
+        
+        this.boardPanel = boardPanel;
+        
+    }
+
     @Override
     public void mouseClicked(MouseEvent me) 
     {
@@ -30,6 +39,12 @@ public class GameDynamicsListener implements MouseListener, MouseMotionListener
         int x = me.getX();
         
         int y = me.getY();
+        
+        int row = y / boardPanel.TILE_DIMENSION;
+        
+        int column = x / boardPanel.TILE_DIMENSION;
+        
+        boardPanel.onMove(row, column);
         
     }
 
