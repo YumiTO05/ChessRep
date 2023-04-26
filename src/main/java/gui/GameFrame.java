@@ -20,9 +20,9 @@ public class GameFrame extends JFrame
     public GameFrame()
     {
         
-        this.game = new core.Game();
+        game = new core.Game();
         
-        this.boardPanel = new BoardPanel(this.game);
+        boardPanel = new BoardPanel(this.game);
         
         add(boardPanel);
         
