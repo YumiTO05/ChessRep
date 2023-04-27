@@ -84,11 +84,11 @@ public class BoardPanel extends JPanel
     public void drawPiece(int row, int column, PieceType pieceType, Color color)
     {
         
-        String iconName = "";
+        String iconName = "/icons/";
         
-        if(color == Color.WHITE) iconName = "W";
+        if(color == Color.WHITE) iconName += "W";
         
-        if(color == Color.BLACK) iconName = "B";
+        if(color == Color.BLACK) iconName += "B";
         
         if(pieceType == PieceType.BISHOP) iconName += "B";
         
@@ -101,6 +101,8 @@ public class BoardPanel extends JPanel
         if(pieceType == PieceType.QUEEN) iconName += "Q";
         
         if(pieceType == PieceType.ROOK) iconName += "R";
+        
+        iconName += ".png";
         
         URL url = getClass().getClassLoader().getResource(iconName);
         
@@ -121,10 +123,10 @@ public class BoardPanel extends JPanel
     private void initializeGame()
     {
         
-        for(int i = 0; i < game.getBoard().ROWS; i++)
+        for(int i = 0; i < Board.ROWS; i++)
         {
             
-            for(int j = 0; j < game.getBoard().COLUMNS; j++)
+            for(int j = 0; j < Board.COLUMNS; j++)
             {
                 
                 Piece piece = game.getBoard().GetTile(i, j).getPiece();
