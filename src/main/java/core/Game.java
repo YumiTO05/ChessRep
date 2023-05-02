@@ -285,12 +285,21 @@ public class Game
             
             move.wouldEndInKingCheck();
             
+            executeMove(move);
+            
+            if(turn == Color.BLACK) turn = Color.WHITE;
+            
+            if(turn == Color.WHITE) turn = Color.BLACK;
+            
+            return true;
+            
+            
             
         }
         catch(InvalidMoveException ime)
         {
             
-            
+            ime.printStackTrace();
             
         }
         
