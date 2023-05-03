@@ -80,7 +80,7 @@ public class Game
                 if((iEqualsZero && j == 2) || (iEqualsZero && j == jMaxValue - 2))
                 {
                     
-                    Bishop blackBishop = new Bishop(PieceType.BISHOP, Color.BLACK);
+                    Bishop blackBishop = new Bishop(PieceType.BISHOP, Color.BLACK, board.tiles[i][j]);
                     
                     board.tiles[i][j].setPiece(blackBishop);
                     
@@ -146,7 +146,7 @@ public class Game
                 if((iEqualsSeven && j == 2) || (iEqualsSeven && j == jMaxValue - 2))
                 {
                     
-                    Bishop whiteBishop = new Bishop(PieceType.BISHOP, Color.WHITE);
+                    Bishop whiteBishop = new Bishop(PieceType.BISHOP, Color.WHITE, board.tiles[i][j]);
                     
                     board.tiles[i][j].setPiece(whiteBishop);
                     
