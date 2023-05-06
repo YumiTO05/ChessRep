@@ -28,9 +28,9 @@ public class Bishop extends Piece
         
         super.validateMove(move);
         
-        if((move.board.GetTile(move.targetRow, move.targetRow).getColor() != ))
+        boolean validMoveDetected = true;
         
-        boolean validMoveDetected = false;
+        if((move.board.GetTile(move.targetRow, move.targetRow).getColor() == Color.BLACK && this.onWhite) || move.board.GetTile(move.targetRow, move.targetRow).getColor() == Color.WHITE && !this.onWhite) validMoveDetected = false;
         
         if(!validMoveDetected)
         {
@@ -39,8 +39,26 @@ public class Bishop extends Piece
             
         }
         
+        diagonalMove(move);
+        
     }
     
+    public static boolean diagonalMove(Move move)
+    {
+       
+        int rowDelta, columnDelta;
+        
+        if(move.sourceRow < move.targetRow) rowDelta = move.targetRow - move.sourceRow;
+        else rowDelta = move.sourceRow - move.targetRow;
+        
+        if(move.sourceColumn < move.targetColumn) columnDelta = move.targetColumn - move.sourceColumn;
+        else columnDelta = move.sourceColumn - move.targetColumn;
+        
+        if(rowDelta != columnDelta) return false;
+        
+        return !move.checkObstacles();
+        
+    }
     
     
 }
