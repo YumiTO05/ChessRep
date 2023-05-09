@@ -112,7 +112,7 @@ public class Game
                 if(iEqualsOne)
                 {
                     
-                    Pawn blackPawn = new Pawn(PieceType.PAWN, Color.BLACK);
+                    Pawn blackPawn = new Pawn(PieceType.PAWN, Color.BLACK, this);
                     
                     board.tiles[i][j].setPiece(blackPawn);
                     
@@ -178,7 +178,7 @@ public class Game
                 if(iEqualsSix)
                 {
                     
-                    Pawn whitePawn = new Pawn(PieceType.PAWN, Color.WHITE);
+                    Pawn whitePawn = new Pawn(PieceType.PAWN, Color.WHITE, this);
                     
                     board.tiles[i][j].setPiece(whitePawn);
                     
